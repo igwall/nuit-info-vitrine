@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nimab - QGIS, projet de la nuit de l'info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Nimab | QGIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="project.html" class="nav-link">Notre projet</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Notre équipe</a></li>
+            <li class="nav-item active"><a href="doc.html" class="nav-link">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="ftco-cover" style="background-image: url(images/fond_doc.jpg);" id="section-home" data-aos="fade"  data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center ftco-vh-100">
+          <div class="col-md-7">
+            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Documentation</h1>
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600">Toutes les informations sur notre projet</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+    
+    <section class="ftco-section" id="section-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12  mb-5" data-aos="fade-up">
+            <h1 class="ftco-heading heading-thin mb-5"> Modélisation, conception.  </h1>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="ftco-section-2">
+      <div class="container-fluid">
+        <div class="section-2-blocks-wrapper row no-gutters">
+          <div class="img col-sm-12 col-md-5">
+            <img src="images/modelisation/model1.png" style="max-width:100%;">
+            <img src="images/modelisation/model2.png" style="max-width:100%;">
+          </div>
+          <div class="text col-md-6 col-lg-7 d-flex">
+            <div class="text-inner align-self-center" data-aos="fade-up">
+              
+              
+              <h3 id="steph">Notre système</h3>
+              <p>Le système se divise en trois sous partie, la partie mission, la partie camp de base et la partie centre de contrôle.
+                <br/><br/>
+                L’explorateur doit pouvoir contrôler ses différents outils, ces derniers seront pour la plupart des objets connectés qui transmettent d’eux-même des informations sous forme de logs. Ces équipements sont des éléments très importants pour l’explorateur, il est donc vital de les vérifier avant chaque mission où ils seront utilisés.
+                <br/><br/>
+                La partie mission permet à l’explorateur de planifier ses sorties, cette interface lui permettra d’avoir une checklist pour vérifier qu’il n’oublie rien avant de partir en mission ainsi que des protocoles qu’il devra suivre au cours de la mission. Il pourra aussi noter ses avis ou ses ressentiment durant la mission.
+                <br/><br/>
+                Lorsque tous les éléments de la checklist de la mission seront checkés, cette dernière sera complété et ne sera plus affiché dans les missions à effectuer.
+                <br/><br/>
+                L’explorateur doit aussi pouvoir prévoir des tâches ponctuelles ou répétitives dans son camp de base, pour cela il aura une interface camp de base où il pourra définir des tâches à effectuer, définir le temps de répétition de cette tâche. Ces tâches seront aussi matérialisé sous la forme d’une checklist.
+                <br/><br/>
+                Une interface centre de contrôle permet de connaître les informations sur l’explorateur ainsi que sur son environnement. Les données sur l’environnement seront récupéré via des API ou directement envoyés par des systèmes embarqués équipés de capteurs.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-2-blocks-wrapper-2">
+      <div class="container-fluid">
+        <div class="section-2-blocks-wrapper row no-gutters d-flex" style="background: #fafafa;">
+          
+            <div class="text col-md-5 col-lg-5 d-flex">
+                <div class="text-inner align-self-center" data-aos="fade-up">
+                  
+                  
+                  <h3 id="steph">Comportement simulé</h3>
+                  <p>Afin de reproduire le comportement des outils de l’explorateur qui envoient des logs, nous avons produit des clients en python qui font des requêtes posts vers le serveur. Ces derniers sont représentés par EquipmentLog. Chaque log appartient est d’un certain type, ce type permet de traiter ces logs par importance et d’agir en conséquence.
+                    <br/><br/>
+                    Les checklists enregistrés sont créées par rapport à des templates de checklist. Afin de modéliser ces templates nous avons utilisé une variante de l’abstract occurrence pattern, de ce fait plusieurs checklists peuvent avoir le même modèle tout en étant traités indépendamment. 
+                  </p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-2">
+        <div class="container-fluid">
+          <div class="section-2-blocks-wrapper row no-gutters">
+            <div class="img col-sm-12 col-md-5">
+            </div>
+            <div class="text col-md-6 col-lg-7 d-flex">
+              <div class="text-inner align-self-center" data-aos="fade-up">
+                
+                
+                <h3 id="steph">Technologies employées</h3>
+                <p>Afin de réaliser cette application, ils nous a paru évident d’utiliser une architecture SOFEA. Nous avons donc séparé le côté client et serveur.  Toutes les communications avec le serveur se font à la manière d’un web service à l’aide de REST. Nous avons décidé de relever le défi d’effectuer une Progressive Web App et de dockerisation afin d’accroître la flexibilité et la portabilité d’exécution de l’application. 
+                    <br/><br/>
+                    Le Front End de l’Application est en Vue.js car c’est un framework js très performant et léger. Nous utilisons aussi Bootstrap afin d’avoir une application responsive.
+                    <br/><br/>
+                    Du côté Back End nous utilisons le framework Ruby on Rails car il permet de développer rapidement des applications web tout en respectant les bonnes pratiques d’usage. Notre Back End étant seulement une API faisant des appels à une base de données, la mise en place des fonctionnalités de base fut très rapide.
+                    </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-2-blocks-wrapper-2">
+        <div class="container-fluid">
+          <div class="section-2-blocks-wrapper row no-gutters d-flex" style="background: #fafafa;">
+            
+              <div class="text col-md-5 col-lg-5 d-flex">
+                  <div class="text-inner align-self-center" data-aos="fade-up">
+                    
+                    
+                    <h3 id="steph">Déploiement</h3>
+                    <p>L’application est déployée sur Heroku car il propose une solution d’hébergement gratuite et facile à mettre en place. Il propose aussi d’ajouter des add-ons au projet, ce qui nous a permis d’héberger notre base de données PostgreSQL sur Heroku. Heroku propose aussi des commandes qui permettent par exemple de récupérer les logs de l’application qui est déployée ce qui est très pratique pour débugger la version déployée.
+                        <br/><br/>
+                        A partir du moment où l’application est déployée, il est très simple de la mettre à jour, en effet le serveur Heroku est lié au dépôt Github sur lequel on envoie les sources de l’application et il est donc possible de déployer de nouvelle version de l’application à partir d’une branche du Github lié. Il est également possible de faire en sorte que Heroku déploie automatiquement dès que l’on push sur la branche master du Github.
+                        </p>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+    
+  
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4">
+            <ul class="ftco-footer-social list-unstyled float-md-right float-lft">
+              <li class="ftco-animate"><a href="https://twitter.com/NamibQ"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.linkedin.com/company/nimab-ndl/"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
